@@ -1,0 +1,21 @@
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Buscar por Nombre , id...</mat-label>
+      <input matInput  value="" name="filterPost" [(ngModel)]="filterPost">
+    </mat-form-field>
+
+  
+<div>
+    <div>
+      
+    </div>
+</div>
+<div class="productos">
+    <div class="producto" *ngFor ="let producto of productos | filter:filterPost" (click)="onClick(producto)" >
+
+         <img [src]="producto.image" class="imagenp">
+         <p>{{producto.name}}</p>
+         <p>{{producto.id}}</p>
+    </div>
+
+</div>

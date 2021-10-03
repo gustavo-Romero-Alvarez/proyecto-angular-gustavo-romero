@@ -1,0 +1,21 @@
+<div class="alt-pedido" >
+    <mat-label class="label_pedidos"> <h3>Pedidos</h3></mat-label>
+    <p>Total: {{totalDeLista()}}</p>
+    <div class="productos">
+        <div 
+
+        >
+        <tr class="producto" *ngFor="let producto of arrProductos; let indice = index;"  >
+            <td> <img [src]="producto.image" class="imagenp"></td>
+            <td><p>{{producto.name}}-   </p></td><td> $   {{producto.id}}</td><td> x {{ producto.cantidad}}</td>
+            <td><button class="btn btn-borde color" (click)="onClickBorrar(indice)" >Eliminar</button></td>
+        </tr>
+            
+        </div>
+    </div>
+
+    <td *ngIf="condition" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+        <img [src]="imagenpedido" class="imgpedido">
+       
+    </td>
+</div>
