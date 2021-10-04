@@ -1,3 +1,4 @@
+import { registerLocaleData } from '@angular/common';
 import { Component, Input, OnInit, Output ,EventEmitter} from '@angular/core';
 
 import { Producto } from '../../models/producto.model';
@@ -18,8 +19,19 @@ export class ListaProductosComponent implements OnInit {
   }
 
   filterPost= '';
-
+   //metodo utilizado para registrar la hora de actividad del usuario
   ngOnInit(): void {
+    var hoy = new Date();
+    var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+    localStorage.setItem("inicio registro",hora);
+  }
+
+  //metodo utilizado para registrar la ultima actividad del usuario
+  ngDoCheck(): void{
+    var hoy = new Date();
+    var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+    console.log(hora)
+    localStorage.setItem("ultimoregistro",hora);
   }
   onClick(pProducto)
   {

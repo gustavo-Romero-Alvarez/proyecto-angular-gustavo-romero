@@ -5,7 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 //service
 import {ApiService} from './service/api.service'
 import { AppComponent } from './app.component';
-import { routing} from './app.routing';
+import { AppRoutingModule} from './AppRoutingModule ';
 import { ListaProductosComponent } from './components/lista-productos/lista-productos.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
 import { MenuComponent } from './menu/menu.component';
@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import { DatosComponent } from './components/datos/datos.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -29,6 +31,8 @@ import { DatosComponent } from './components/datos/datos.component';
     MenuComponent,
     FilterPipe,
     DatosComponent,
+    NotFoundComponent,
+    LoginComponent,
 
   ],
   imports: [
@@ -38,7 +42,8 @@ import { DatosComponent } from './components/datos/datos.component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatInputModule,
-    routing,
+    AppRoutingModule
+  
     
  
   ],
