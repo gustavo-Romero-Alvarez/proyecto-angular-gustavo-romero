@@ -1,0 +1,29 @@
+<body class="heigth" >
+
+    <mat-form-field class="example-full-width margin" appearance="fill">
+        <mat-label class="margin">Buscar Pokemon</mat-label>
+        <input matInput placeholder="Insertar ID" value="0" type="text" (change)="buscarpokemon($event)" [(ngModel)]="idpoke">
+
+      </mat-form-field>
+
+     <div *ngIf="error" class="margin">
+      
+      <app-not-found></app-not-found>
+     </div> 
+
+     <div *ngIf="!error">
+      <table mat-table matSort class="mat-elevation-z8 margin">
+        <tr>
+          <td class="color"> <img [src]="imagenback" ></td> 
+           <td class="color"> <img [src]="imagefront" ></td> 
+          <td class="color"> <img [src]="imageshiny" ></td>
+          <td class="color"> <img [src]="imageshinyfront" ></td>
+        </tr>
+        <tr>
+          <td class="color"> {{name}}</td>
+        </tr>
+    
+      </table>
+     </div>
+
+</body>

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
+  errorimage="https://i.pinimg.com/originals/0c/ea/6a/0cea6af976c3b89f0d79d200f4a136e0.gif"
   constructor() { }
 
   ngOnInit(): void {

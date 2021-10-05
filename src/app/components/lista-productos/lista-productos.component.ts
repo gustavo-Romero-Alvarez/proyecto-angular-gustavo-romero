@@ -30,7 +30,7 @@ export class ListaProductosComponent implements OnInit {
   ngDoCheck(): void{
     var hoy = new Date();
     var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
-    console.log(hora)
+   
     localStorage.setItem("ultimoregistro",hora);
   }
   onClick(pProducto)
