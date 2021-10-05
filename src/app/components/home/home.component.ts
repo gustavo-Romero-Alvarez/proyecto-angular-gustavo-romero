@@ -11,7 +11,7 @@ import { ApiService } from '../../service/api.service';
 })
 export class HomeComponent implements OnInit {
 
-  arrComida: Poke[];
+  rickandmorty: any;
   arrBebida: Poke[];
   arrpoke: any;
   
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
  
    this.apiService.getallpersonajes().subscribe(res =>{
      
-       this.arrComida=res["results"]
+       this.rickandmorty=res["results"]
        
    }); 
  
