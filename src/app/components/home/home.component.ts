@@ -3,6 +3,7 @@ import {  ViewEncapsulation } from '@angular/core';
 import { Poke } from '../../interface/poke';
 import { Producto } from '../../models/producto.model'
 import { ApiService } from '../../service/api.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit {
   productosSeleccionados: Producto[];
   urlImagen: string;
   
- constructor(private apiService :ApiService){
+ constructor(private apiService :ApiService,
+  private router:Router){
    this.productosSeleccionados=[];
  }
  ngOnInit() {
@@ -101,9 +103,11 @@ export class HomeComponent implements OnInit {
    }
  }
  
- 
- 
- 
+
+ lazyload(){
+   
+  this.router.navigate(['lazyload']);
+ }
  
  
  

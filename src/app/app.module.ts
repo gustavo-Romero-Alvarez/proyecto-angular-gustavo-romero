@@ -21,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 
 import {MatButton, MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LazyLoadComponent } from './components/lazy-load/lazy-load.component';
 
 
 
@@ -36,6 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NotFoundComponent,
     LoginComponent,
     HomeComponent,
+    LazyLoadComponent,
 
   ],
   imports: [
