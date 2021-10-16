@@ -1,13 +1,13 @@
-<form class="example-form back">
+<form class="example-form back" novalidate [formGroup]="user">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Ingresar usuario</mat-label>
       
-      <input matInput placeholder="Insertar ID"  type="text" name="usuario" [(ngModel)]="usuario">
+      <input matInput placeholder="Insertar ID"  type="text" name="usuario" [(ngModel)]="usuario" formControlName="name">
     </mat-form-field>
   
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Ingresar Contraseña</mat-label>
-        <input [(ngModel)]="contrasena" matInput placeholder="Contrasena"  type="text" name="contrasena" >
+        <input [(ngModel)]="contrasena" matInput placeholder="Contrasena"  type="text" name="contrasena"  formControlName="password">
  
       </mat-form-field>
   
@@ -17,3 +17,5 @@
       <img src="https://i.pinimg.com/originals/48/be/86/48be861cef9815129ae2ee52baf94151.jpg" class="img_fondo" alt="">
 
   </div>
+
+  

@@ -20,6 +20,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 
 import {MatButton, MatButtonModule} from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -46,6 +47,7 @@ import {MatButton, MatButtonModule} from '@angular/material/button';
     MatInputModule,
     AppRoutingModule,
     MatButtonModule,
+    ReactiveFormsModule
     
   ],
   providers: [ApiService],
